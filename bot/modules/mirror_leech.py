@@ -188,7 +188,7 @@ def _mirror_leech(bot, message, isZip=False, extract=False, isQbit=False, isLeec
                     _auto_start_dl(engine, msg_id, timeout)
                 else: start_ml(extras, catlistener)
                 if multi > 1:
-                    sleep(4)
+                    sleep(60)
                     nextmsg = type('nextmsg', (object, ), {'chat_id': message.chat_id, 'message_id': message.reply_to_message.message_id + 1})
                     msg = message.text.split(maxsplit=mi+1)
                     msg[mi] = f"{multi - 1}"
@@ -246,7 +246,7 @@ def _mirror_leech(bot, message, isZip=False, extract=False, isQbit=False, isLeec
     else: start_ml(extras, catlistener)
 
     if multi > 1:
-        sleep(4)
+        sleep(60)
         nextmsg = type('nextmsg', (object, ), {'chat_id': message.chat_id, 'message_id': message.reply_to_message.message_id + 1})
         msg = message.text.split(maxsplit=mi+1)
         msg[mi] = f"{multi - 1}"
